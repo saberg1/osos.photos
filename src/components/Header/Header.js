@@ -1,8 +1,10 @@
+import './Header.css';
+
 const Header = () => {
   return (
-    <h1>
-      I A HEADER
-    </h1>
+    <header>
+      <h1>oso -- Home About Contact Adventures?</h1>
+    </header>
   )
 }
 
