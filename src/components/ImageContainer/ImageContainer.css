@@ -1,0 +1,32 @@
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.container:nth-child(even) {
+  background: #fff;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.img-container {
+  margin: 10% 0;
+  height: 70%;
+  position: relative;
+}
+
+img {
+  height: 60%;
+  width: 60%;
+}
+
+
+.mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #131313;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 500px) {}
