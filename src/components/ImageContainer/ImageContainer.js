@@ -5,15 +5,28 @@ import protest3 from '../../images/protest3.jpg'
 import tattooArtist from '../../images/tattooArtist.jpg'
 import { gsap, Power3 } from "gsap";
 import './ImageContainer.css';
-
+//image array prop
 const ImageContainer = () => {
   // let revealRefs = useRef([])s
   // revealRefs.current = []
+
+
+  //pass them as props, then use a foreach/forloop to assign them to the div with teh index pass through as the div
+  //function to return the mask variable the the indexed # next to it?
+  //array to hold all the images to count, coming from the app.js as a prop
 
   let mask = useRef(null)
   let mask2 = useRef(null)
   let mask3 = useRef(null)
   let mask4 = useRef(null)
+
+  const crtMask = (arr) => {
+    // arr = image array prop passeed down from app
+    // for (let i = 0; i < arr.length; i++) {
+    //   arr[i] ref={mask[i]}
+      
+    // }
+  }
 
 //   const images = [
 //     {
@@ -43,19 +56,7 @@ const ImageContainer = () => {
 // ]
 
   useEffect(() => {
-    // images.forEach((el => {
-      // }))
-
-      gsap.to(mask,10, 
-        { opacity: 0, xPercent:100,delay: 1, left:'100%',
-          ease: Power3.easeOut, stagger: 1 });
-      gsap.to(mask2,10, 
-        { opacity: 0, xPercent:100,delay: 1, left:'100%',
-          ease: Power3.easeOut, stagger: 1 });
-      gsap.to(mask3,10, 
-        { opacity: 0, xPercent:100,delay: 1, left:'100%',
-          ease: Power3.easeOut, stagger: 1 });
-      gsap.to(mask4,10, 
+      gsap.to([mask, mask2, mask3, mask4],10, 
         { opacity: 0, xPercent:100,delay: 1, left:'100%',
           ease: Power3.easeOut, stagger: 1 });
   }, [])
@@ -84,8 +85,8 @@ const ImageContainer = () => {
             </div>
           )
         })
-      } */}
-      {/* <div ref={addToRefs} className='container'>
+      } 
+      /* <div ref={addToRefs} className='container'>
       // images.map((image)) => {
       //   return (
         //   )
